@@ -1,0 +1,3 @@
+<template>
+  <IndexDevelopmentSec />
+</template>
