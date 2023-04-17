@@ -23,7 +23,7 @@
             <svg
               id="theme-toggle-dark-icon"
               xmlns="http://www.w3.org/2000/svg"
-              class="block transistion relative m-auto h-5 w-5 fill-gray-500 duration-300 group-hover:rotate-180 group-hover:fill-yellow-400 dark:fill-gray-300"
+              class="hidden dark:block transistion relative m-auto h-5 w-5 fill-gray-500 duration-300 group-hover:rotate-180 group-hover:fill-yellow-400 dark:fill-gray-300"
               viewBox="0 0 20 20"
               fill="currentColor">
               <path
@@ -34,7 +34,7 @@
             <svg
               id="theme-toggle-light-icon"
               xmlns="http://www.w3.org/2000/svg"
-              class="hidden transistion relative m-auto h-5 w-5 fill-gray-500 duration-300 group-hover:-rotate-90 group-hover:fill-blue-900"
+              class="block dark:hidden transistion relative m-auto h-5 w-5 fill-gray-500 duration-300 group-hover:-rotate-90 group-hover:fill-blue-900"
               viewBox="0 0 20 20"
               fill="currentColor">
               <path
