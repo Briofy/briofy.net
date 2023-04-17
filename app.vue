@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { userInfo } from "os";
+// import { userInfo } from "os";
 import { initFlowbite } from "flowbite";
 
 // initialize components based on data attribute selectors
