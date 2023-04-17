@@ -9,8 +9,27 @@ module.exports = {
     "./app.vue",
     "./node_modules/flowbite/**/*.js",
   ],
+
+  darkMode: "class",
+  variants: {
+    backgroundColor: [
+      "dark",
+      "dark-hover",
+      "dark-group-hover",
+      "dark-even",
+      "dark-odd",
+    ],
+    borderColor: ["dark", "dark-focus", "dark-focus-within"],
+    textColor: ["dark", "dark-hover", "dark-active"],
+  },
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        blue: {
+          950: "#0a101e",
+        },
+      },
+    },
   },
 
   plugins: [require("flowbite")],

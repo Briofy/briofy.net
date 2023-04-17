@@ -3,7 +3,7 @@
     <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
       <div class="relative">
         <h1
-          class="text-center text-5xl font-bold text-blue-900 sm:text-6xl lg:text-left lg:text-7xl">
+          class="text-center text-5xl font-bold text-blue-900 dark:text-white sm:text-6xl lg:text-left lg:text-7xl">
           Design, Build,
           <span class="relative">
             <svg
@@ -23,7 +23,7 @@
                 d="M58.1 11.1c-1 0-1.9 0-2.3.2.2.2 2.3.6 2.3-.2zM208.2 13.3c-.1 0-.3.1-.4.1.1 0 .3 0 .4-.1zM216.3 12.9c-.1-.1-.2-.2-.4-.3 0 .3.1.5.4.3zM132.6 11.5zM178.5 13.7c.7-.4 1-.7 1-1-.4.1-.7.3-1 1zM163 12.6c-.1.1-.2.1-.3.2.3-.1.3-.2.3-.2zM130.2 12c.7-.4 1.6-.3 2.4-.5-.7.2-1.9-.3-2.4.5zM226.1 11.4l-.7.6.8-.4zM218.6 12c-.3-.1-1.7.3-1.3.6.4-.3.9-.5 1.3-.6zM189.6 11.4l-.3.6.7-.5z"></path>
             </svg>
             <span
-              class="bg-gradient-to-r from-blue-600 to-violet-500 relative bg-clip-text text-transparent md:px-2"
+              class="bg-gradient-to-r from-blue-600 to-violet-500 relative bg-clip-text dark:from-blue-600 dark:to-violet-500 text-transparent md:px-2"
               >Scale</span
             >
           </span>
@@ -32,18 +32,19 @@
         <div class="relative items-center gap-12 lg:flex">
           <div
             class="text-center sm:mx-auto sm:w-11/12 md:mt-12 md:w-4/5 lg:mt-0 lg:mr-auto lg:w-6/12 lg:text-left">
-            <p class="mt-12 text-lg text-gray-600 sm:text-xl">
+            <p
+              class="mt-12 text-lg text-gray-600 dark:text-gray-300 sm:text-xl">
               Computers used to be magical. But much of that magic has been lost
               over time, replaced by subpar tools and practices that slow teams
               down and hold great work back.
             </p>
             <form action="" class="mt-12">
               <div
-                class="relative flex items-center rounded-full border border-blue/20 bg-white p-1 px-2 shadow-md focus-within:ring-2 md:p-2 lg:pr-3">
+                class="relative flex items-center rounded-full border border-blue/20 bg-white p-1 px-2 shadow-md focus-within:ring-2 dark:border-gray-700 dark:bg-slate-950 dark:text-white md:p-2 lg:pr-3">
                 <div class="py-3 pl-4 lg:pl-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="m-auto h-6 w-6 fill-gray-500"
+                    class="m-auto h-6 w-6 fill-gray-500 dark:fill-gray-400"
                     viewBox="0 0 20 20"
                     fill="currentColor">
                     <path
@@ -56,22 +57,22 @@
                   aria-label="your email"
                   autocomplete="email"
                   placeholder="Your mail address"
-                  class="w-full rounded-full bg-transparent p-4 placeholder-gray-600 outline-none"
+                  class="w-full rounded-full bg-transparent p-4 placeholder-gray-600 outline-none dark:placeholder-white"
                   type="email" />
                 <div class="md:pr-1.5 lg:pr-0">
                   <button
                     type="submit"
                     title="Start buying"
-                    class="relative ml-auto h-12 w-16 before:absolute before:inset-0 before:rounded-full before:bg-blue-500 before:transition before:duration-300 active:duration-75 active:before:scale-95 sm:w-auto sm:px-6">
+                    class="relative ml-auto h-12 w-16 before:absolute before:inset-0 before:rounded-full before:bg-blue-500 before:transition before:duration-300 active:duration-75 active:before:scale-95 dark:before:bg-blue-500 sm:w-auto sm:px-6">
                     <span
-                      class="relative hidden w-max font-semibold text-white md:block">
+                      class="relative hidden w-max font-semibold text-white dark:text-gray-900 md:block">
                       Get Started
                     </span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
-                      class="relative mx-auto h-6 w-6 text-white md:hidden">
+                      class="relative mx-auto h-6 w-6 text-white dark:text-gray-900 md:hidden">
                       <path
                         d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z"></path>
                     </svg>
@@ -80,11 +81,11 @@
               </div>
             </form>
             <div class="mt-12 hidden lg:block">
-              <span class="text-gray-700"
+              <span class="text-gray-700 dark:text-white"
                 >From the most talented
                 <NuxtLink
                   :to="{ name: 'team' }"
-                  class="text-blue-500 underline">
+                  class="text-blue-500 underline dark:text-blue-500">
                   Teams
                 </NuxtLink>
                 !</span
@@ -120,14 +121,14 @@
           </div>
         </div>
         <div
-          class="mt-12 border-y border-gray-100 py-8 text-center md:py-12 xl:mt-20">
+          class="mt-12 border-y border-gray-100 py-8 text-center dark:border-gray-800 md:py-12 xl:mt-20">
           <NuxtLink
             :to="{ name: 'team' }"
-            class="text-sm font-semibold tracking-wider text-gray-800">
+            class="text-sm font-semibold tracking-wider text-gray-800 dark:text-white">
             TRUSTED BY YOUR FAVORED TOP TECHS COMPANIES
           </NuxtLink>
           <div
-            class="mt-8 flex flex-wrap justify-center gap-6 brightness-75 contrast-200 grayscale sm:justify-between lg:gap-24">
+            class="mt-8 flex flex-wrap justify-center gap-6 brightness-75 contrast-200 grayscale dark:brightness-200 dark:contrast-0 sm:justify-between lg:gap-24">
             <img
               class="h-8 w-auto lg:h-10 lg:w-auto"
               src="/images/clients/airbnb.svg"

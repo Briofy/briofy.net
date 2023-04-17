@@ -12,26 +12,27 @@
             height="1592" />
         </div>
         <div class="md:7/12 lg:w-6/12">
-          <h2 class="text-3xl font-bold text-gray-800 md:text-4xl xl:text-5xl">
+          <h2
+            class="text-3xl font-bold text-gray-800 dark:text-white md:text-4xl xl:text-5xl">
             Development is carried out by passionate developers
           </h2>
-          <p class="mt-8 text-gray-600">
+          <p class="mt-8 text-gray-600 dark:text-gray-300">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis
             voluptatem accusantium nemo perspiciatis delectus atque autem!
             repellat expedita consequatur! Officiis id consequatur atque
             doloremque!
           </p>
-          <p class="mb-12 mt-4 text-gray-600">
+          <p class="mb-12 mt-4 text-gray-600 dark:text-gray-300">
             Nobis minus voluptatibus pariatur dignissimos libero quaerat iure
             expedita at? Asperiores nemo possimus nesciunt dicta veniam
             aspernatur quam mollitia.
           </p>
 
           <NuxtLink
-            style="background-color: #1565c0"
-            class="relative flex h-11 w-max items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full rounded-2xl before:bg-blue before:transition-transform before:duration-300 active:duration-75 active:before:scale-95"
+            class="dark:bg-blue-400 relative flex h-11 w-max items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full rounded-3xl before:bg-blue-400 before:transition-transform before:duration-300 active:duration-75 active:before:scale-95 dark:before:bg-blue-400 hover:bg-blue-500 dark:hover:bg-blue-500"
             :to="{ name: 'contact' }">
-            <span class="relative text-base font-semibold text-white"
+            <span
+              class="relative text-base font-semibold text-white dark:text-gray-900"
               >Get started</span
             >
           </NuxtLink>
