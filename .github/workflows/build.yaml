@@ -6,7 +6,7 @@ jobs:
   lint:
     uses: ./.github/workflows/lint.yaml
   build:
-    needs: [lint]
+    needs: [declare_variables,lint]
     runs-on: ubuntu-latest
     steps:
 
