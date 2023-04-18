@@ -1,4 +1,4 @@
-name: Deploy
+name: deploy
 
 on:
   push:
@@ -6,18 +6,19 @@ on:
       - "main"
       - "next"
 
+env:
+  BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+  RELEASE_NAME: briofy-web
+  RELEASE_NAMESPACE: briofy-web
+  RELEASE_DOMAIN: briofy.net
+  NEXT_RELEASE_DOMAIN: next.briofy.net
+
 jobs:
   build:
     uses: ./.github/workflows/build.yaml
   helm:
     needs: [build]
     runs-on: 'ubuntu-latest'
-    env:
-      BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
-      RELEASE_NAME: briofy-web
-      RELEASE_NAMESPACE: briofy-web
-      RELEASE_DOMAIN: briofy.net
-      NEXT_RELEASE_DOMAIN: next.briofy.net
     steps:
       - uses: actions/checkout@v3
 
