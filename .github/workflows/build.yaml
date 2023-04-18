@@ -9,6 +9,8 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    env:
+      BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
     steps:
 
       - name: Checkout
@@ -33,4 +35,4 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ghcr.io/${{ github.repository }}:${{ github.ref }}
+          tags: ghcr.io/${{ github.repository }}:${{ env.BRANCH_NAME }}
