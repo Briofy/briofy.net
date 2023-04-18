@@ -14,14 +14,9 @@ env:
   NEXT_RELEASE_DOMAIN: next.briofy.net
 
 jobs:
-  build:
-    uses: ./.github/workflows/build.yaml
-  helm:
-    needs: [build]
+  declare_variables:
     runs-on: 'ubuntu-latest'
     steps:
-      - uses: actions/checkout@v3
-
       - name: Lowecase the repo name
         run: |
           echo "REPOSITORY_NAME=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
@@ -46,7 +41,14 @@ jobs:
 
       - name: "Set IMG_TAG variable"
         run: echo 'IMG_TAG=${{ env.BRANCH_NAME }}-${{ steps.vars.outputs.sha_short }}' >>$GITHUB_ENV
-
+  build:
+    needs: [declare_variables]
+    uses: ./.github/workflows/build.yaml
+  helm:
+    needs: [build]
+    runs-on: 'ubuntu-latest'
+    steps:
+      - uses: actions/checkout@v3
       - name: Run Helm and Deploy
         uses: WyriHaximus/github-action-helm3@v3
         with:
