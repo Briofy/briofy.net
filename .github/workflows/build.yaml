@@ -38,4 +38,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push
-        run: .ci/scripts/push-docker-image.sh
+        run: ./.ci/scripts/push-docker-image.sh
