@@ -1,0 +1,12 @@
+apiVersion: v2
+appVersion: 0.0.1
+name: briofy.net
+version: 0.0.1
+description: A helm chart for briofy.net project
+home: https://gitlab.com/Briofy/briofy.net
+maintainers:
+- name: Josh
+  url: https://github.com/mrjosh
+sources:
+- https://github.com/Briofy/briofy.net
+type: application

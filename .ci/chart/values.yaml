@@ -1,0 +1,22 @@
+name: "sample"
+replicaCount: 1
+
+ingressController: nginx
+
+service:
+  type: ClusterIP
+
+domainName: "briofy.net"
+
+tls:
+  enabled: false
+  clusterIssuer: le-clusterissuer
+  secretName: briofy-net-tls
+
+image:
+  repository: "briofy.{{ .Values.name }}-web"
+  pullPolicy: Always
+  tag: latest
+
+resources: {}
+tolerations: {}
