@@ -117,7 +117,7 @@
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink :to="switchLocalePath('ger')"
+                <NuxtLink :to="switchLocalePath('de')"
                   class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
                   role="menuitem">
                   <div class="inline-flex items-center">
@@ -180,8 +180,8 @@
           </form>
           <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
             <li v-for="(link, index) in navLinks" :key="index">
-              <NuxtLink active-class="text-blue-700 dark:text-blue-600"
-                class="block py-2 pr-4 pl-3 dark:hover:bg-gray-700 hover:bg-gray-50 rounded lg:p-0 dark:text-white"
+              <NuxtLink active-class="text-blue-700 dark:!text-blue-400"
+                class="block py-2 pr-4 pl-3 hover:dark:underline hover:underline rounded lg:p-0 dark:text-white"
                 aria-current="page" :to="localePath(link.link)">
                 {{ link.title }}
               </NuxtLink>

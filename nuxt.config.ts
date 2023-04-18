@@ -26,9 +26,9 @@ export default defineNuxtConfig({
         dir: "ltr",
       },
       {
-        code: "ger",
-        iso: 'ger',
-        file: "ger.ts",
+        code: "de",
+        iso: 'de',
+        file: "de.ts",
         dir: "ltr",
       },
       {
