@@ -1,11 +1,11 @@
 <template>
-  <footer class="bg-gray-50">
+  <footer class="bg-gray-50 dark:bg-gray-900">
     <div class="p-4 py-6 mx-auto max-w-screen-xl md:p-8 lg:-10">
       <div class="grid grid-cols-2 gap-8 lg:grid-cols-6">
         <div class="col-span-2">
           <a
             href="#"
-            class="flex items-center mb-2 text-2xl font-semibold text-gray-900 sm:mb-0">
+            class="flex items-center mb-2 text-2xl font-semibold text-gray-900 sm:mb-0 dark:text-white">
             <svg
               class="mr-2 h-8"
               viewBox="0 0 33 33"
@@ -133,14 +133,16 @@
             </svg>
             Briofy
           </a>
-          <p class="my-4 font-light text-gray-500">
+          <p class="my-4 font-light text-gray-500 dark:text-gray-400">
             Briofy is a open-source library of over 400+ web components and
             interactive elements built with the utility classes from Tailwind
             CSS.
           </p>
           <ul class="flex mt-5 space-x-6">
             <li>
-              <a href="#" class="text-gray-500 hover:text-gray-900">
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
                 <svg
                   class="w-5 h-5"
                   fill="currentColor"
@@ -154,7 +156,9 @@
               </a>
             </li>
             <li>
-              <a href="#" class="text-gray-500 hover:text-gray-900">
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
                 <svg
                   class="w-5 h-5"
                   fill="currentColor"
@@ -168,7 +172,9 @@
               </a>
             </li>
             <li>
-              <a href="#" class="text-gray-500 hover:text-gray-900">
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
                 <svg
                   class="w-5 h-5"
                   fill="currentColor"
@@ -180,7 +186,9 @@
               </a>
             </li>
             <li>
-              <a href="#" class="text-gray-500 hover:text-gray-900">
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
                 <svg
                   class="w-5 h-5"
                   fill="currentColor"
@@ -194,7 +202,9 @@
               </a>
             </li>
             <li>
-              <a href="#" class="text-gray-500 hover:text-gray-900">
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
                 <svg
                   class="w-5 h-5"
                   fill="currentColor"
@@ -210,22 +220,11 @@
           </ul>
         </div>
         <div class="lg:mx-auto">
-          <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
-            Company
-          </h2>
-          <ul class="text-gray-500">
-            <li v-for="(link, index) in companyLinks" :key="index" class="mb-4">
-              <NuxtLink class="hover:underline" :to="link.link">
-                {{ link.title }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
-        <div class="lg:mx-auto">
-          <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
+          <h2
+            class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
             Help center
           </h2>
-          <ul class="text-gray-500">
+          <ul class="text-gray-500 dark:text-gray-400">
             <li v-for="(link, index) in helpLinks" :key="index" class="mb-4">
               <NuxtLink class="hover:underline" :to="link.link">
                 {{ link.title }}
@@ -234,11 +233,12 @@
           </ul>
         </div>
         <div class="lg:mx-auto">
-          <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
-            Legal
+          <h2
+            class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            Company
           </h2>
-          <ul class="text-gray-500">
-            <li v-for="(link, index) in legalLinks" :key="index" class="mb-4">
+          <ul class="text-gray-500 dark:text-gray-400">
+            <li v-for="(link, index) in companyLinks" :key="index" class="mb-4">
               <NuxtLink class="hover:underline" :to="link.link">
                 {{ link.title }}
               </NuxtLink>
@@ -246,10 +246,11 @@
           </ul>
         </div>
         <div class="lg:mx-auto">
-          <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
+          <h2
+            class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
             Download
           </h2>
-          <ul class="text-gray-500">
+          <ul class="text-gray-500 dark:text-gray-400">
             <li
               v-for="(link, index) in downloadLinks"
               :key="index"
@@ -260,9 +261,23 @@
             </li>
           </ul>
         </div>
+        <div class="lg:mx-auto">
+          <h2
+            class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            Legal
+          </h2>
+          <ul class="text-gray-500 dark:text-gray-400">
+            <li v-for="(link, index) in legalLinks" :key="index" class="mb-4">
+              <NuxtLink class="hover:underline" :to="link.link">
+                {{ link.title }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
       </div>
-      <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-      <span class="block text-sm text-center text-gray-500"
+      <hr
+        class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <span class="block text-sm text-center text-gray-500 dark:text-gray-400"
         >© 2021-2022
         <NuxtLink :to="{ name: 'index' }" class="hover:underline"
           >Briofy™</NuxtLink

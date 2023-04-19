@@ -1,3 +1,3 @@
 <template>
-  <IndexDevelopmentSec />
+  <IndexDevelopmentSec class="pt-32" />
 </template>

@@ -1,0 +1,10 @@
+export default {
+    meta: {
+        title: "Briofy",
+        description:
+            "Trader4 Base Layer is a platform for creating and managing your own decentralized exchange. It is a fork of Uniswap V3, and is built on top of the Polygon network.",
+    },
+    index: {
+        title: "Trader4 Base Layer"
+    }
+};

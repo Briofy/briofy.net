@@ -1,3 +1,3 @@
 <template>
-  <IndexFeatures />
+  <IndexFeatures class="pt-32" />
 </template>
