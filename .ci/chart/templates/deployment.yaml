@@ -29,7 +29,7 @@ spec:
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
-        - containerPort: 80
+        - containerPort: 3000
         {{- if .Values.resources }}
         resources: {{- toYaml .Values.resources | nindent 8 }}
         {{- end }}
