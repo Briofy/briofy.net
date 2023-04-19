@@ -103,16 +103,18 @@ jobs:
       - name: Run Helm and Deploy
         uses: WyriHaximus/github-action-helm3@v3
         with:
-          exec: helm upgrade --install 
-            "${{ github.event.repository.name }}.${{ env.BRANCH_NAME }}"
-            --namespace ${{ env.RELEASE_NAMESPACE }}
-            --set name="${{ env.RELEASE_NAME }}"
-            --set domainName="${{ env.RELEASE_DOMAIN }}"
-            --set image.repository="${{ env.IMG_NAME }}"
-            --set image.tag="${{ env.IMG_TAG }}"
-            --set tls.enabled="true"
-            --set tls.clusterIssuer="cf-letsencrypt"
-            --set tls.secretName="prod-${{ env.RELEASE_NAME }}-net-tls"
-            --create-namespace
-            .ci/chart
+          exec: |
+            helm upgrade --install \
+              "${{ github.event.repository.name }}.${{ env.BRANCH_NAME }}" \
+              --namespace ${{ env.RELEASE_NAMESPACE }} \
+              --set name="${{ env.RELEASE_NAME }}" \
+              --set domainName="${{ env.RELEASE_DOMAIN }}" \
+              --set image.repository="${{ env.IMG_NAME }}" \
+              --set image.tag="${{ env.IMG_TAG }}" \
+              --set tls.enabled="true" \
+              --set tls.clusterIssuer="cf-letsencrypt" \
+              --set tls.secretName="prod-${{ env.RELEASE_NAME }}-net-tls" \
+              --create-namespace \
+              --atomic \
+              .ci/chart
           kubeconfig: '${{ secrets.KUBECONFIG }}'
