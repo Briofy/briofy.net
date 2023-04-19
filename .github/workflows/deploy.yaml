@@ -14,33 +14,6 @@ env:
   NEXT_RELEASE_DOMAIN: next.briofy.net
 
 jobs:
-  declare_variables:
-    runs-on: 'ubuntu-latest'
-    steps:
-      - name: Lowecase the repo name
-        run: |
-          echo "REPOSITORY_NAME=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
-
-      - name: Declare short commit id
-        id: vars
-        shell: bash
-        run: |
-          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
-
-      - name: "Set RELEASE_DOMAIN to next if branch is next"
-        if: env.BRANCH_NAME == 'next'
-        run: echo 'RELEASE_DOMAIN=${{ env.NEXT_RELEASE_DOMAIN }}' >>$GITHUB_ENV
-
-      - name: "Set RELEASE_NAME if to next branch is next"
-        if: env.BRANCH_NAME == 'next'
-        run: echo 'RELEASE_NAME=next-${{ env.RELEASE_NAME }}' >>$GITHUB_ENV
-
-      - name: "Set IMG_NAME variable"
-        run: echo 'IMG_NAME=ghcr.io/${{ env.REPOSITORY_NAME }}' >>$GITHUB_ENV
-
-      - name: "Set IMG_TAG variable"
-        run: echo 'IMG_TAG=${{ env.BRANCH_NAME }}-${{ steps.vars.outputs.sha_short }}' >>$GITHUB_ENV
   build:
     uses: ./.github/workflows/build.yaml
   helm:
