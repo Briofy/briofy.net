@@ -69,7 +69,12 @@ jobs:
           password: ${{ secrets.GHCR_TOKEN }}
 
       - name: Build and push
-        run: ./.ci/scripts/push-docker-image.sh
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          platforms: linux/amd64
+          push: true
+          tags: ${{ env.IMG_NAME }}:${{ env.IMG_TAG }}
 
   helm:
     needs: [build]
