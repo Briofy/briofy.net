@@ -23,7 +23,7 @@ spec:
         app: {{ .Values.name }}
     spec:
       imagePullSecrets:
-      - name: gitlab-registry
+      - name: ghcr
       containers:
       - name: main
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
