@@ -2,6 +2,9 @@ name: build
 
 on: [workflow_call]
 
+env:
+  BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+
 jobs:
   lint:
     uses: ./.github/workflows/lint.yaml
