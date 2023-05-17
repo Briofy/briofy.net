@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@morev/vue-transitions/nuxt', '@nuxtjs/i18n', "@nuxtjs/i18n"],
+  modules: ["@morev/vue-transitions/nuxt", "@nuxtjs/i18n", "@nuxtjs/i18n"],
   i18n: {
     strategy: "prefix",
     lazy: true,
@@ -9,32 +9,32 @@ export default defineNuxtConfig({
     locales: [
       {
         code: "en",
-        iso: 'en-US',
-        file: "en.ts",
+        iso: "en-US",
+        file: "en.json",
         dir: "ltr",
       },
       {
         code: "fa",
-        iso: 'fa-IR',
-        file: "fa.ts",
+        iso: "fa-IR",
+        file: "fa.json",
         dir: "rtl",
       },
       {
         code: "fr",
-        iso: 'fr',
-        file: "fr.ts",
+        iso: "fr",
+        file: "fr.json",
         dir: "ltr",
       },
       {
         code: "de",
-        iso: 'de',
-        file: "de.ts",
+        iso: "de",
+        file: "de.json",
         dir: "ltr",
       },
       {
         code: "it",
-        iso: 'IT',
-        file: "it.ts",
+        iso: "IT",
+        file: "it.json",
         dir: "ltr",
       },
     ],
