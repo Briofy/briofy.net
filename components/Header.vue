@@ -89,6 +89,7 @@
           <button
             type="button"
             data-dropdown-toggle="language-dropdown"
+            id="language-dropdown-toggle"
             class="inline-flex items-center text-gray-800 dark:text-gray-300 font-medium rounded-lg text-sm px-2.5 lg:px-5 py-2.5 mr-2 focus:outline-none"
           >
             <img
@@ -130,6 +131,7 @@
           id="mobile-menu-search"
         >
           <ul
+            :key="langKey"
             class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
           >
             <li v-for="(link, index) in navLinks" :key="index">
@@ -150,14 +152,15 @@
 </template>
 
 <script lang="ts" setup>
-import { initFlowbite } from "flowbite";
+import { initFlowbite, Dropdown } from "flowbite";
 // initialize components based on data attribute selectors
 onMounted(() => {
   initFlowbite();
 });
 const switchLocalePath = useSwitchLocalePath();
 const localePath = useLocalePath();
-const { t } = useI18n();
+const { t, locale } = useI18n();
+const langKey = ref(0);
 
 const navLinks = ref([
   { title: t("headerLinks.Home"), link: "/" },
@@ -193,5 +196,18 @@ const activeLocale = ref(
 
 const switchActiveLocale = (index: number) => {
   activeLocale.value = localeItems.value[index];
+
+  /*
+   * $targetEl: required
+   * $triggerEl: required
+   * options: optional
+   */
+  // set the dropdown menu element
+  const $targetEl = document.getElementById("language-dropdown");
+  // set the element that trigger the dropdown menu on click
+  const $triggerEl = document.getElementById("language-dropdown-toggle");
+  const dropdown = new Dropdown($targetEl, $triggerEl);
+  // hide the dropdown menu
+  dropdown.hide();
 };
 </script>

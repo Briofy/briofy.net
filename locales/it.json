@@ -5,5 +5,13 @@
   },
   "index": {
     "title": "لایه پایه تریدر ۴"
+  },
+  "headerLinks": {
+    "Home": "Casa",
+    "Company": "Azienda",
+    "Marketplace": "Mercato",
+    "Features": "Caratteristiche",
+    "Team": "Squadra",
+    "Contact": "Contatto"
   }
 }
