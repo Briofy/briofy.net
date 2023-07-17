@@ -166,6 +166,7 @@ const navLinks = ref([
   { title: t("headerLinks.Home"), link: "/" },
   { title: t("headerLinks.Company"), link: "/company" },
   { title: t("headerLinks.Marketplace"), link: "/market-place" },
+  { title: t("headerLinks.Products"), link: "/products" },
   { title: t("headerLinks.Features"), link: "/features" },
   { title: t("headerLinks.Team"), link: "/team" },
   { title: t("headerLinks.Contact"), link: "/contact" },
@@ -177,10 +178,30 @@ const localeItems = ref([
     flagSrc: "/images/icons/flags/en.svg",
     text: "English",
   },
+    {
+        lang: "ar",
+        flagSrc: "/images/icons/flags/it.svg",
+        text: "العربية",
+    },
+    {
+        lang: "tr",
+        flagSrc: "/images/icons/flags/en.svg",
+        text: "Türkçe",
+    },
+    {
+        lang: "fa",
+        flagSrc: "/images/icons/flags/it.svg",
+        text: "Persian",
+    },
   {
     lang: "de",
     flagSrc: "/images/icons/flags/de.svg",
     text: "Deutch",
+  },
+  {
+    lang: "es",
+    flagSrc: "/images/icons/flags/it.svg",
+    text: "Español ",
   },
   {
     lang: "it",
